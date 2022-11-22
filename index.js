@@ -189,7 +189,7 @@ app.post('/payments', async (req, res) =>{
     });
 
     app.put("/users/admin/:id", verifyJWT,varifyAdmin, async (req, res) => {
-      const id = req.params.is;
+      const id = req.params.id;
       const filter = { _id: ObjectId(id) };
       const options = { upsert: true };
       const updatedDoc = {
